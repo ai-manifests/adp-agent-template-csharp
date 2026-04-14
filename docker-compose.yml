@@ -1,0 +1,21 @@
+services:
+  my-adp-agent:
+    build: .
+    container_name: my-adp-agent
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      # Required. Generate a fresh token at startup time:
+      #   ADP_BEARER_TOKEN=$(openssl rand -hex 32)
+      - ADP_BEARER_TOKEN=${ADP_BEARER_TOKEN}
+
+      # Optional but strongly recommended — enables signed calibration snapshots
+      # at /.well-known/adp-calibration.json. Generate a key pair with:
+      #   dotnet run -- --generate-keypair   (TODO: wire this up)
+      # or use any Ed25519 keygen tool and keep the private key secret.
+      - ADP_PRIVATE_KEY=${ADP_PRIVATE_KEY:-}
+      - ADP_PUBLIC_KEY=${ADP_PUBLIC_KEY:-}
+    volumes:
+      - ./journal:/app/journal
+      - ./agents:/app/agents:ro

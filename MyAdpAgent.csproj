@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>MyAdpAgent</RootNamespace>
+    <AssemblyName>MyAdpAgent</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Adp.Agent" Version="0.1.*" />
+    <!--
+      Uncomment to enable the optional Neo3 calibration anchor. Also edit
+      src/Program.cs to wire up the scheduler inside the host's lifecycle hooks.
+    -->
+    <!-- <PackageReference Include="Adp.Agent.Anchor" Version="0.1.*" /> -->
+  </ItemGroup>
+
+</Project>

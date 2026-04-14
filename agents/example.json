@@ -1,0 +1,21 @@
+{
+  "agentId": "did:adp:my-agent-v1",
+  "port": 3000,
+  "domain": "my-agent.example.com",
+
+  "decisionClasses": ["code.correctness"],
+  "authorities": {
+    "code.correctness": 0.7
+  },
+
+  "stakeMagnitude": "medium",
+  "defaultVote": "approve",
+  "defaultConfidence": 0.65,
+
+  "dissentConditions": [
+    "if any test marked critical regresses",
+    "if the proposed action would change a public API contract"
+  ],
+
+  "journalDir": "./journal"
+}
