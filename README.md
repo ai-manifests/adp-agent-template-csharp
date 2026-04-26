@@ -2,13 +2,13 @@
 
 A forkable .NET 10 starter for building an [Agent Deliberation Protocol](https://adp-manifest.dev) agent on the C# / ASP.NET Core runtime. Clone this, edit `agents/example.json` and `src/MyEvaluator.cs`, and you have a federation-ready agent.
 
-Depends on [`Adp.Agent`](https://git.marketally.com/ai-manifests/adp-agent-csharp) from the Gitea NuGet feed.
+Depends on [`Adp.Agent`](https://github.com/ai-manifests/adp-agent-csharp) from the Gitea NuGet feed.
 
 ## 30-second quickstart
 
 ```bash
 # 1. Clone
-git clone https://git.marketally.com/ai-manifests/adp-agent-template-csharp.git my-adp-agent
+git clone https://github.com/ai-manifests/adp-agent-template-csharp.git my-adp-agent
 cd my-adp-agent
 
 # 2. Generate a bearer token
