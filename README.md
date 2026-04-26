@@ -114,10 +114,6 @@ docker run -p 3000:3000 \
   my-adp-agent:latest
 ```
 
-## NuGet feed
-
-`Adp.Agent` is published to the `ai-manifests` Gitea NuGet feed. The `nuget.config` at the repo root routes `Adp.Agent`, `Adj.Manifest`, `Adp.Manifest`, and `Acb.Manifest` to Gitea and everything else to nuget.org. No extra auth configuration needed — reads are anonymous.
-
 ## Federation checklist
 
 Once your agent is running locally, to join a real federation:
